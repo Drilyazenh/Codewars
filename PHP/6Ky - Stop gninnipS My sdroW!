@@ -1,0 +1,15 @@
+function spinWords(string $str): string {
+  $inArr = explode(" ",$str);
+  $resultArr = [];
+  foreach($inArr as $str){
+    if(strlen($str)>=5){
+      $str = strrev($str);
+    };
+    $resultArr[]=$str;
+  }
+  return implode(" ",$resultArr);
+}
+-----------BP-----------------------
+function duplicateCount($text) {
+  return count(array_filter(array_count_values(str_split(strtolower($text))), function($v){return $v>1;}));
+}
