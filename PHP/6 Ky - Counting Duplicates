@@ -1,0 +1,11 @@
+function duplicateCount($text) {
+  $text = strtolower($text);
+  $text = str_split($text);
+  $arrCountValues = array_count_values($text);
+  $Counter = 0;
+  foreach($arrCountValues as $key => $val){
+    $val>1?$Counter ++:"";
+  }
+  return $Counter;
+    
+}
