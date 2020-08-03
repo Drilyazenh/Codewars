@@ -1,0 +1,15 @@
+function sortStr($w){
+    $letters = str_split($w); natcasesort($letters);
+    return implode('',$letters);
+}
+function anagrams(string $word, array $words): array {
+  $result =[];
+  $wordSort = sortStr($word);
+  foreach($words as $value){
+    $valueSort = sortStr($value);
+    if($wordSort == $valueSort){
+      $result[]=$value;
+    };
+    }
+    return $result;
+}
