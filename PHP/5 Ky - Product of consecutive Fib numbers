@@ -1,0 +1,11 @@
+function productFib($prod){
+$line=sqrt($prod)/2;
+for($i=3; $i<$line; $i++)
+{
+$phi=round(pow(((1 + sqrt(5)) / 2), $i-1)/sqrt(5));
+$phi2=round(pow(((1 + sqrt(5)) / 2), $i-2)/sqrt(5));
+$result=$phi*$phi2;
+if($result==$prod){return [$phi2,$phi,true];};
+if($result>$prod){return [$phi2,$phi,false];};
+}
+}
